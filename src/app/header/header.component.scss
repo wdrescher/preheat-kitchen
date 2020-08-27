@@ -1,9 +1,27 @@
+$icon_size: 80px; 
+
 .pk-header {
     display: flex;
     width: 100%; 
     background-color: black; 
     flex-flow: row wrap; 
-    justify-content: space-between; 
-    height: 100px;  
+    height: 120px;  
     position: absolute;
+    align-items: center;
+
+    &__icon {
+        height: $icon_size; 
+        width: $icon_size; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-family: 'Helvetica';
+        color: white;
+        margin-left: 10px; 
+    }
 }
