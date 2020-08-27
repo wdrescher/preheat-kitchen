@@ -119,6 +119,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "preheat-kitchen"
+    }
+  },
+  "defaultProject": "preheat-kitchen",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
