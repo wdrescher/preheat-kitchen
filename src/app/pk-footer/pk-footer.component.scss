@@ -1,0 +1,23 @@
+.pk-footer {
+    display: flex;
+    background-color: black;
+    height: 100px; 
+    width: 100%; 
+    flex-flow: row wrap; 
+    justify-content: flex-start;
+    align-items: center;
+    
+    &__item {
+        color: white; 
+        font-size: 20px; 
+        font-weight: 200; 
+        font-family: Helvetica;
+        cursor: pointer;
+        margin: auto 10px; 
+    }
+
+    &__item:hover {
+        font-weight: 500;
+        text-decoration: underline;    
+    }
+}
