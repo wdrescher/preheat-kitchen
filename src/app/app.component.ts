@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'preheat-kitchen';
+
+  get backgroundImageProperties(): string {
+    return "background: url(assets/vegetables-cooking-food-banner-size.jpg/) no-repeat center center fixed"
+  }
 }
