@@ -14,7 +14,7 @@ export class PkModalComponent implements OnInit {
 
   ngOnInit() { }
 
-  closeModal() {
+  close() {
     this.dialogRef.close();
   }
 }

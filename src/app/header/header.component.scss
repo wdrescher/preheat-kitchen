@@ -16,6 +16,10 @@ $icon_size: 80px;
         justify-content: center;
         align-items: center;
         margin: 10px;
+        @media screen and (max-width: 600px){
+            margin-left: unset;
+        }
+        margin-left: 8%;
     }
 
     &__title {

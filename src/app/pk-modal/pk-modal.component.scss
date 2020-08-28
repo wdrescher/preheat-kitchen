@@ -1,3 +1,63 @@
 .pk-modal {
     display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+
+    &-bar {
+        width: 100%; 
+        display: flex;
+        flex-flow: row wrap; 
+        justify-content: space-between;
+        align-items: center;
+        height: 25px; 
+
+        &__exit {
+            width: 20px; 
+            height: 20px; 
+            margin: 1px 1px 1px 1px; 
+        }
+
+        &__exit:hover {
+            width: 24px; 
+            height: 24px; 
+            margin: 0;
+        }
+
+        &__title {
+            font-family: Helvetica;
+            font-size: 30px; 
+            font-weight: 200; 
+            margin-left: 20px; 
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+    }
+
+    &-form {
+        margin: 40px auto; 
+        width: 90%; 
+        display: flex;
+        flex-flow: column nowrap; 
+        justify-content: center;
+        align-items: flex-start;
+
+        &__label {
+            font-size: 24px;
+            font-weight: 100;  
+            margin-bottom: 12px; 
+        }
+
+        &__input {
+            font-family: Roboto;
+            width: 85%; 
+            border: #f2f2f2 1px solid; 
+            border-radius: 20px; 
+            padding: 0 20px; 
+            height: 30px; 
+            background-color: lightgray; 
+            margin-bottom: 25px; 
+        }
+    }
+
 }
