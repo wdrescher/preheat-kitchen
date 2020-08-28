@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogConfig, MatDialog } from '@angular/material/dialog';
+import { PkModalComponent } from './pk-modal/pk-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+
   title = 'preheat-kitchen';
 
   get backgroundImageProperties(): string {
     return "background: url(assets/vegetables-cooking-food-banner-size.jpg/) no-repeat center center fixed"
   }
+
+  constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -34,5 +39,16 @@ export class AppComponent implements OnInit{
         href: "/dataprivacy" 
       }
     });
+  }
+
+  openModal(): void {
+    const dialogConfig = new MatDialogConfig();
+    // The user can't close the dialog by clicking outside its body
+    dialogConfig.disableClose = true;
+    dialogConfig.id = "modal-component";
+    dialogConfig.height = "350px";
+    dialogConfig.width = "600px";
+    // https://material.angular.io/components/dialog/overview
+    const modalDialog = this.matDialog.open(PkModalComponent, dialogConfig);
   }
 }

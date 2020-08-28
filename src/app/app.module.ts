@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { PKButtonComponent } from './pk-button/pk-button.component';
 import { PkFooterComponent } from './pk-footer/pk-footer.component';
 import { PkModalComponent } from './pk-modal/pk-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,13 @@ import { PkModalComponent } from './pk-modal/pk-modal.component';
     PkModalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule, 
+    MatButtonModule, 
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  entryComponents: [PkModalComponent]
 })
 export class AppModule { }
