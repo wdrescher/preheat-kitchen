@@ -9,6 +9,7 @@ import { PkModalComponent } from './pk-modal/pk-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PkInputBoxComponent } from './pk-input-box/pk-input-box.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HeaderComponent,
     PKButtonComponent,
     PkFooterComponent,
-    PkModalComponent
+    PkModalComponent,
+    PkInputBoxComponent
   ],
   imports: [
     BrowserModule,

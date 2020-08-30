@@ -3,11 +3,59 @@ $icon_size: 80px;
 .pk-header {
     display: flex;
     width: 100%; 
-    background-color: black; 
+    max-width: 2000px;
+    margin: auto; 
+    background-color: white; 
     flex-flow: row wrap; 
-    height: 120px;  
+    min-height: 120px;  
     position: relative;
     align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+        margin-bottom: 10px; 
+    }
+
+    &__left {
+        display: flex;
+        flex-flow: row nowrap; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__right{
+        margin-right: 10%; 
+        display: flex;
+        flex-flow: row nowrap; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        font-size: 20px;
+        font-family: 'Helvetica';
+        color: black;
+        margin-left: 20px; 
+        text-transform: uppercase;
+        letter-spacing: 4px; 
+        font-weight: 100; 
+        cursor: pointer; 
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__hyphen {
+        font-size: 25px;
+        font-family: 'Helvetica';
+        color: black;
+        margin-left: 20px; 
+        text-transform: uppercase;
+        letter-spacing: 4px; 
+        font-weight: 200; 
+    }
 
     &__icon {
         height: $icon_size; 

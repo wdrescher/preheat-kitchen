@@ -10,10 +10,7 @@ import { PkModalComponent } from './pk-modal/pk-modal.component';
 export class AppComponent implements OnInit{
 
   title = 'preheat-kitchen';
-
-  get backgroundImageProperties(): string {
-    return "background: url(assets/vegetables-cooking-food-banner-size.jpg/) no-repeat center center fixed"
-  }
+  imageSource = 'assets/banner.jpg';
 
   constructor(public matDialog: MatDialog) { }
 

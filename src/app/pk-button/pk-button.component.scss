@@ -4,12 +4,13 @@
     justify-content: center;
     align-items: center;
     min-width: 200px; 
-    background-color: #A14A76; 
+    background-color: black; 
     min-height: 50px; 
     max-width: 300px; 
     margin: auto; 
     border-radius: 20px; 
     cursor: pointer;
+    box-shadow: 0 2px 2px;
 
     &__text {
         color: white; 
