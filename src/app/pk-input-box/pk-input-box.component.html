@@ -1,9 +1,42 @@
 <div class="pk-input-box">
-    <form class="pk-input-box-form">
-        <label class="pk-input-box-form__label" for="email">Email</label>
-        <input class="pk-input-box-form__input" id="email" type="text" placeholder="youremail@domain.com">
-        <label class="pk-input-box-form__label" for="creator">Favorite Food Creator</label>
-        <input class="pk-input-box-form__input" id="creator" type="text">
-        <pk-button class="pk-input-box-form__button" text="Get Started"></pk-button>
+    <div class="pk-input-box__title">Let's get started</div>
+    <form class="pk-input-box-form" (ngSubmit)='subscribe(subscribeForm)'>
+        <mat-form-field>
+            <label class="pk-input-box-form__label" for="email">Email</label>
+            <input 
+                class="pk-input-box-form__input" 
+                id="email"
+                input 
+                pattern="\S+@\S+\.\S+" 
+                placeholder="Email" 
+                required 
+                #email='ngModel' 
+                name='userName'
+                [(ngModel)]='subscribeData.email'
+            >
+
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <div class="" *ngIf="email.errors.required">
+                        Email is required.
+                    </div>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <label class="pk-input-box-form__label" for="creator">Favorite Food Creator</label>
+            <input 
+                matInput 
+                #lastName='ngModel'
+                name='creator'
+                [(ngModel)]='subscribeData.lastName'
+                class="pk-input-box-form__input" 
+                id="creator" 
+                type="text" 
+                placeholder="Youtuber, Creator, etc"
+            >            
+        </mat-form-field>
+        <button class="pk-input-box-form__button-container">
+            <pk-button type="submit" class="pk-input-box-form__button" text="Get Started"></pk-button>
+        </button>
     </form>
 </div>

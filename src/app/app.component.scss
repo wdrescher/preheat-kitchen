@@ -23,17 +23,16 @@
         object-fit: cover;
         width: 100%; 
         opacity: .7; 
-        box-shadow: gray 0 3px 10px;
+        box-shadow: gray 0 20px 50px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     &__frame {
-        width: 800px;
         border-width: 0;
+        width: 100%; 
         border-image: unset;
-        height: inherit;
         display: flex;
         flex-direction: column;
         justify-content: center;

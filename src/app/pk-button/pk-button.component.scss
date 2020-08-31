@@ -3,18 +3,20 @@
     flex-flow: row wrap; 
     justify-content: center;
     align-items: center;
-    min-width: 200px; 
-    background-color: black; 
-    min-height: 50px; 
+    min-width: 150px; 
+    background-color: darkred; 
+    min-height: 40px; 
     max-width: 300px; 
     margin: auto; 
-    border-radius: 20px; 
+    border-radius: 10px; 
     cursor: pointer;
-    box-shadow: 0 2px 2px;
+    box-shadow: 0 1px 3px;
 
     &__text {
+        text-align: center; 
+        margin: auto 10px; 
         color: white; 
-        font-size: 20px; 
+        font-size: 16px; 
         text-align: center;
         font-family: "Helvetica";
         text-transform: uppercase;

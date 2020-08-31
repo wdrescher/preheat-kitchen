@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PkInputBoxComponent } from './pk-input-box/pk-input-box.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PkInputBoxComponent } from './pk-input-box/pk-input-box.component';
     BrowserModule,
     BrowserAnimationsModule, 
     MatButtonModule, 
-    MatDialogModule
+    MatDialogModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent], 
