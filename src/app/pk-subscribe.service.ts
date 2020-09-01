@@ -10,21 +10,18 @@ export class PkSubscribeService {
       private http: HttpClient
     ) {}
 
+    mailChimpEndpoint = 'https://yahoo.us17.list-manage.com/subscribe/post-json?u=c486f4ea93c2d387ce900d9a7&id=0d23893822&';
+
     subscribeToList(email: string, creator: string) {
       const md5 = new Md5(); 
-      const url = `https://us17.api.mailchimp.com/3.0/lists/0d23893822/members/` //${md5.appendStr(email).end()}`
-      const body = {
-        email_address: email, 
-        merge_fields: {
-          'text': creator
-        }, 
-        status: "subscribed"
-      };
-      const headers= {
-        authorization: 'e5b9fac034fcf978fabb1d10f565b1c0-us17',
-        'content-type': "application/json"
-      }
-      console.log('called')
-      return this.http.post(url, body, {headers: headers})
+      const httpParams = new HttpParams()
+        .set('b_c486f4ea93c2d387ce900d9a7_0d23893822', '')
+        .set('EMAIL', email)
+        .set('MMERGE1', creator)
+        .set('subscribe', 'Subscribe')
+        .set('_', '1598983545625'); 
+      
+      const url = this.mailChimpEndpoint + httpParams.toString(); 
+      return this.http.jsonp<any>(url, 'c');
     }
 }

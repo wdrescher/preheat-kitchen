@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PkInputBoxComponent } from './pk-input-box/pk-input-box.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule, 
     MatDialogModule, 
     ReactiveFormsModule, 
-    HttpClientModule
+    HttpClientModule, 
+    HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent], 
