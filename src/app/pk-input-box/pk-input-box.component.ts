@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { PkSubscribeService } from '../pk-subscribe.service';
 
 @Component({
@@ -8,24 +10,28 @@ import { PkSubscribeService } from '../pk-subscribe.service';
   styleUrls: ['./pk-input-box.component.scss']
 })
 export class PkInputBoxComponent implements OnInit {
-  subscribeData: any = <any>{};
+  registerForm: FormGroup;
+  submitted = false;
 
   constructor(
-    private pkSubscribeService: PkSubscribeService
-  ) { }
+    private pkSubscribeService: PkSubscribeService, 
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
+    this.registerForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      creator: ['']
+    });
   }
 
-  subscribe(subscribeForm: NgForm) {
-    if (subscribeForm.invalid) {
+  get f() { return this.registerForm.controls; }
+
+  onSubmit() {
+    if (this.registerForm.invalid) {
       return;
     }
-    this.pkSubscribeService.subscribeToList(this.subscribeData)
-      .subscribe(res => {
-        alert('Subscribed!');
-      }, err => {
-        console.log(err);
-      })
+    this.submitted = true; 
+    this.pkSubscribeService.subscribeToList(this.registerForm.value["email"], this.registerForm.value["creator"]).subscribe(); 
   }
 }

@@ -1,42 +1,31 @@
 <div class="pk-input-box">
     <div class="pk-input-box__title">Let's get started</div>
-    <form class="pk-input-box-form" (ngSubmit)='subscribe(subscribeForm)'>
-        <mat-form-field>
-            <label class="pk-input-box-form__label" for="email">Email</label>
-            <input 
-                class="pk-input-box-form__input" 
-                id="email"
-                input 
-                pattern="\S+@\S+\.\S+" 
-                placeholder="Email" 
-                required 
-                #email='ngModel' 
-                name='userName'
-                [(ngModel)]='subscribeData.email'
-            >
+    <form class="pk-input-box-form" (ngSubmit)='onSubmit()' [formGroup]="registerForm" *ngIf="!submitted">
+        <label class="pk-input-box-form__label" for="email">Email</label>
+        <input 
+            formControlName="email"
+            class="pk-input-box-form__input" 
+            id="email"
+            placeholder="Email" 
+        >
+        <div *ngIf="f.email.touched > 0 && f.email.errors" class="pk-input-box-form--error">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div>
 
-            <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
-                    <div class="" *ngIf="email.errors.required">
-                        Email is required.
-                    </div>
-            </mat-error>
-        </mat-form-field>
-
-        <mat-form-field>
-            <label class="pk-input-box-form__label" for="creator">Favorite Food Creator</label>
-            <input 
-                matInput 
-                #lastName='ngModel'
-                name='creator'
-                [(ngModel)]='subscribeData.lastName'
-                class="pk-input-box-form__input" 
-                id="creator" 
-                type="text" 
-                placeholder="Youtuber, Creator, etc"
-            >            
-        </mat-form-field>
-        <button class="pk-input-box-form__button-container">
-            <pk-button type="submit" class="pk-input-box-form__button" text="Get Started"></pk-button>
+        <label class="pk-input-box-form__label" for="creator">Favorite Food Creator</label>
+        <input 
+            formControlName="creator" 
+            class="pk-input-box-form__input" 
+            id="creator" 
+            type="text" 
+            placeholder="Youtuber, Creator, etc"
+        >            
+        <button class="pk-input-box-form__button-container" type="submit">
+            <pk-button class="pk-input-box-form__button" text="Get Started"></pk-button>
         </button>
     </form>
+    <div *ngIf="submitted">
+        Thanks for your response
+    </div>
 </div>
