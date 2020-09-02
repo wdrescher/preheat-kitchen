@@ -71,6 +71,9 @@ $icon_size: 80px;
     }
 
     &__title {
+        @media screen and (max-width:400px) {
+            font-size: 30px; 
+        }
         font-size: 45px;
         font-family: 'Helvetica';
         color: #9A0937;

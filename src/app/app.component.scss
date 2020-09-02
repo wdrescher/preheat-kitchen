@@ -31,12 +31,25 @@
 
     &__frame {
         border-width: 0;
-        width: 100%; 
+        width: 80%; 
         border-image: unset;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        animation-name: input-box;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        margin:auto; 
+
+        @keyframes input-box {
+            0%   {margin-right:-100%;}
+            25%  {margin-right: 10%}  
+            27%  {margin-right: 10.5%}
+            30%  {margin-right: 9.5%} 
+            32%  {margin-right: 10%} 
+            40% {margin-right: auto}     
+        }
     }
 
     &__button {

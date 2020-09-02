@@ -1,5 +1,5 @@
 <div class="pk-input-box">
-    <div class="pk-input-box__title">Let's get started</div>
+    <div class="pk-input-box__title">Lets get started</div>
     <form class="pk-input-box-form" (ngSubmit)='onSubmit()' [formGroup]="registerForm" *ngIf="!submitted">
         <label class="pk-input-box-form__label" for="email">Email</label>
         <input 
@@ -22,10 +22,10 @@
             placeholder="Youtuber, Creator, etc"
         >            
         <button class="pk-input-box-form__button-container" type="submit">
-            <pk-button class="pk-input-box-form__button" text="Get Started"></pk-button>
+            <pk-button class="pk-input-box-form__button" text="Join now"></pk-button>
         </button>
     </form>
-    <div *ngIf="submitted">
-        Thanks for your response
+    <div *ngIf="submitted" class="pk-input-box__success-message">
+        Thanks for joining our mailing list
     </div>
 </div>
