@@ -10,7 +10,7 @@ import { PkModalComponent } from './pk-modal/pk-modal.component';
 export class AppComponent implements OnInit{
 
   title = 'preheat-kitchen';
-  imageSource = 'assets/banner.jpg';
+  imageSource = 'assets/banner-stock.jpeg';
 
   constructor(public matDialog: MatDialog) { }
 
