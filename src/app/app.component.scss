@@ -38,8 +38,8 @@
         justify-content: center;
         align-items: center;
         animation-name: input-box;
-        animation-duration: 2s;
-        animation-timing-function: ease-out;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
         margin:auto; 
 
         @keyframes input-box {
@@ -102,6 +102,9 @@
         font-family: Roboto;
         font-weight: 200; 
         color: white; 
+        @media screen and (max-width: 500px) {
+            font-size: 18px; 
+        }
     }
 }
 
@@ -129,6 +132,9 @@
         line-height: 1.5;
         font-family: Roboto;
         font-weight: 200; 
+        @media screen and (max-width: 500px) {
+            font-size: 18px; 
+        }
     }
 }
 
