@@ -15,7 +15,8 @@
         width: 100%; 
     }
 
-    &__img {
+    &__img {        
+        animation: fade-in ease 3s;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -27,6 +28,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+
+        @keyframes fade-in {
+            0% {
+                opacity:0;
+              }
+              100% {
+                opacity:.7;
+              }
+        }
+ 
     }
 
     &__frame {
@@ -39,7 +51,7 @@
         align-items: center;
         animation-name: input-box;
         animation-duration: 3s;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: ease;
         margin:auto; 
 
         @keyframes input-box {
