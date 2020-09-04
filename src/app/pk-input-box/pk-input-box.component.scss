@@ -8,6 +8,7 @@
     max-width: 700px; 
     box-shadow: black 0 50px 100px;
     flex-direction: column;
+    opacity: .95;
 
     transition-property: height;
     transition-duration: 2s;
@@ -67,6 +68,26 @@
             &-container {
                 border: none; 
                 margin: auto; 
+
+                &--error {
+                    margin: auto; 
+                    border: none; 
+                    animation-name: error-wiggle; 
+                    animation-duration: .2s;
+                    animation-timing-function: ease;
+
+                    @keyframes error-wiggle {
+                        33% {
+                            transform: translateX(-5px);
+                        }
+                        66% {
+                            transform: translateX(5px);
+                        }
+                        99% {
+                            transform: translatex(0); 
+                        }
+                    }
+                }
             }
         }
     }

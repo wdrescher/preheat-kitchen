@@ -12,6 +12,7 @@ import { PkSubscribeService } from '../pk-subscribe.service';
 export class PkInputBoxComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
+  errored = false; 
 
   constructor(
     private pkSubscribeService: PkSubscribeService, 
@@ -29,10 +30,27 @@ export class PkInputBoxComponent implements OnInit {
 
   onSubmit() {
     if (this.registerForm.invalid) {
+      this.errorAnimation(); 
       return;
     }
     this.submitted = true; 
     this.pkSubscribeService.subscribeToList(this.registerForm.value["email"], this.registerForm.value["creator"]).subscribe(); 
+  }
+
+  errorAnimation() {
+    this.errored = true; 
+    this.delay(200).then(() => {
+      this.errored = false; 
+    }) 
+  }
+
+  private delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
+  get buttonContainerClass() {
+    const defaultClass = 'pk-input-box-form__button-container';
+    return this.errored ? defaultClass + '--error' : defaultClass; 
   }
 }
 

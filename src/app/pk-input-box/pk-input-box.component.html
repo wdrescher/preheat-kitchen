@@ -21,8 +21,8 @@
             type="text" 
             placeholder="Youtuber, Creator, etc"
         >            
-        <button class="pk-input-box-form__button-container" type="submit">
-            <pk-button class="pk-input-box-form__button" text="Join now"></pk-button>
+        <button [ngClass]="buttonContainerClass" type="submit">
+            <pk-button type="submit" class="pk-input-box-form__button" text="Join now"></pk-button>
         </button>
     </form>
     <div *ngIf="submitted" class="pk-input-box__success-message">
