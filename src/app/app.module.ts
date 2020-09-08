@@ -12,6 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { PkInputBoxComponent } from './pk-input-box/pk-input-box.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
     PkInputBoxComponent
   ],
   imports: [
+    ScrollToModule.forRoot(), 
     BrowserModule,
     BrowserAnimationsModule, 
     MatButtonModule, 

@@ -38,6 +38,11 @@ export class AppComponent implements OnInit{
     });
   }
 
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
   openModal(): void {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
