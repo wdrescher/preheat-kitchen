@@ -1,7 +1,8 @@
 <pk-header></pk-header>
 <div class="pk-container">
     <div class="pk-container__fade">
-        <div class="pk-container__img" [style.backgroundImage]="'url('+ imageSource +')'">
+        <div class="pk-container__img" loading="eager" [style.backgroundImage]="'url('+ imageSource +')'">
+            <div class='pk-container__title'>Let's get cooking</div>
             <pk-input-box class="pk-container__frame"></pk-input-box>
         </div>
     </div>
