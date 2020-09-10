@@ -10,11 +10,7 @@
     box-shadow: black 0 50px 100px;
     flex-direction: column;
     opacity: .95;
-
-    transition-property: height;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-    transition-delay: 1s;   
+    transition: height 4s linear; 
 
     &__success-message {
         margin: 40px auto; 

@@ -13,6 +13,7 @@ export class PkInputBoxComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   errored = false; 
+  loading = false; 
 
   constructor(
     private pkSubscribeService: PkSubscribeService, 
@@ -33,8 +34,11 @@ export class PkInputBoxComponent implements OnInit {
       this.errorAnimation(); 
       return;
     }
-    this.submitted = true; 
-    this.pkSubscribeService.subscribeToList(this.registerForm.value["email"], this.registerForm.value["creator"]).subscribe(); 
+    this.loading = true; 
+    this.pkSubscribeService.subscribeToList(this.registerForm.value["email"], this.registerForm.value["creator"]).subscribe(
+      (success) => {this.loading = false;     this.submitted = true;}, 
+      (error) => {}
+    ); 
   }
 
   errorAnimation() {

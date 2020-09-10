@@ -1,3 +1,4 @@
 <div mat-raised-button class="pk-button">
-    <div class="pk-button__text"> {{text}} </div>
+    <div *ngIf="!loading" class="pk-button__text"> {{text}} </div>
+    <div *ngIf="loading" class="pk-button__loading"></div>
 </div>
