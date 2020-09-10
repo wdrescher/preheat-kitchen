@@ -13,6 +13,8 @@
         font-family: Helvetica;
         cursor: pointer;
         margin: auto 10px; 
+        background: unset; 
+        border: unset; 
     }
 
     &__item:hover {

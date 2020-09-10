@@ -32,6 +32,8 @@ $icon_size: 80px;
     }
 
     &__link {
+        background: unset; 
+        border: unset; 
         font-size: 20px;
         font-family: 'Helvetica';
         color: black;

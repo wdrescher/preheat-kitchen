@@ -66,14 +66,18 @@
         &__button {
             opacity: 1;
             margin: auto;
+            border: unset; 
+            background: unset; 
 
             &-container {
                 border: none; 
                 margin: auto; 
+                background: unset; 
 
                 &--error {
                     margin: auto; 
-                    border: none; 
+                    border: unset; 
+                    background: unset;
                     animation-name: error-wiggle; 
                     animation-duration: .2s;
                     animation-timing-function: ease;
