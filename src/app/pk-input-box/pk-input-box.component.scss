@@ -10,12 +10,36 @@
     box-shadow: black 0 50px 100px;
     flex-direction: column;
     opacity: .95;
-    transition: height 4s linear; 
+    transition: all 4s ease; 
+
+    &--animation {
+        @extend .pk-input-box;
+        animation: success .1s ease forwards;  
+        transition: height 4s ease; 
+        @keyframes success {
+            0% {
+                border-left: 100px solid transparent; 
+                border-top: 50px solid transparent; 
+                border-bottom: 50px solid transparent; 
+                height: auto; 
+            }
+            50%{
+                border-left: 10px solid transparent; 
+                border-top: 5px solid transparent; 
+                border-bottom: 5px solid transparent; 
+                transform: translateX(600px);
+                height: 0px; 
+            }
+            99% { display: none;}
+            100% { display: none; }
+        }
+    }
 
     &__success-message {
         margin: 40px auto; 
         font-size: 20px;
         font-weight: 100;  
+       
     }
 
     &__title {

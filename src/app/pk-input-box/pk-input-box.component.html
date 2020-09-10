@@ -1,4 +1,4 @@
-<div class="pk-input-box">
+<div [ngClass]="{'pk-input-box--animation': submitted, 'pk-input-box': !submitted}">
     <form class="pk-input-box-form" (ngSubmit)='onSubmit()' [formGroup]="registerForm" *ngIf="!submitted">
         <label class="pk-input-box-form__label" for="email">Email</label>
         <input 
@@ -25,6 +25,6 @@
         </button>
     </form>
     <div *ngIf="submitted" class="pk-input-box__success-message">
-        Thanks for joining our mailing list
+        Thanks for joining
     </div>
 </div>
