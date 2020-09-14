@@ -1,4 +1,5 @@
-<div [ngClass]="{'pk-input-box--animation': submitted, 'pk-input-box': !submitted}">
+<!-- <div [ngClass]="{'pk-input-box--animation': submitted, 'pk-input-box': !submitted}"> -->
+<div class='pk-input-box'>
     <form class="pk-input-box-form" (ngSubmit)='onSubmit()' [formGroup]="registerForm" *ngIf="!submitted">
         <label class="pk-input-box-form__label" for="email">Email</label>
         <input 
@@ -20,9 +21,12 @@
             type="text" 
             placeholder="Youtuber, Creator, etc"
         >            
-        <button [ngClass]="buttonContainerClass" type="submit">
+        <button *ngIf="!submitted" [ngClass]="buttonContainerClass" type="submit">
             <pk-button type="submit" class="pk-input-box-form__button" text="Join now" [loading]="loading"></pk-button>
         </button>
+        <div *ngIf="submitted">
+        
+        </div>
     </form>
     <div *ngIf="submitted" class="pk-input-box__success-message">
         Thanks for joining
