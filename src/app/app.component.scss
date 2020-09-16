@@ -36,6 +36,17 @@
         text-shadow: black 0 0 100px;
         z-index: 2; 
     }
+
+    &__sub-title {
+        font-size: 24px; 
+        color: white; 
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-weight: 100;
+        width: 100%; 
+        margin: 20px auto auto 100px;
+    }
     
     &__img {     
         z-index: -1;    
