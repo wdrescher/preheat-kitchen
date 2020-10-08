@@ -1,6 +1,4 @@
 .pk-banner {
-    min-height: 100%;
-    min-width: 100%;
     object-fit: cover;
     object-position: center;
     flex: 1;
@@ -16,7 +14,6 @@
     }
 
     &__title {
-        width: 100%; 
         color: white; 
         @media screen and (max-width: 700px) {
             margin: 50px auto auto 10px; 
@@ -43,21 +40,29 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        font-weight: 100;
-        width: 100%; 
+        font-weight: 500;
+        max-width: 35%; 
         margin: 20px auto auto 100px;
+
+        @media screen and (max-width: 600px) {
+            max-width: 100%; 
+            font-size: 14px;
+            margin: auto 10px;
+            font-weight: 400; 
+        }
     }
     
     &__img {     
+
         z-index: -1;    
         animation: fade-in ease 3s;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: normal;;
-        height: 800px; 
+        height: 93vh; 
         object-fit: fill;
-        width: 100%; 
+        width: 100vw; 
         box-shadow: gray 0 20px 50px;
         display: flex;
         justify-content: center;
@@ -119,7 +124,7 @@
     align-items: center;
     align-items: center;
     background-color: darkred;
-    margin-top: 50px; 
+    margin: 100px auto 0 auto; 
 
     &__container {
         max-width: 1400px; 
@@ -148,7 +153,7 @@
         margin: auto;
         text-align: justify;
         width: 90%;
-        font-size: 35px;
+        font-size: 20px;
         line-height: 1.5;
         font-family: Roboto;
         font-weight: 200; 
@@ -164,7 +169,7 @@
     @media only screen and (max-width: 600px) {
         max-width: unset;
     }
-    margin: 20px auto 40px auto;
+    margin: 100px auto 100px auto;
 
     &__title {
         font-size: 45px;
@@ -179,7 +184,7 @@
         margin: auto;
         text-align: justify;
         width: 90%;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 1.5;
         font-family: Roboto;
         font-weight: 200; 
