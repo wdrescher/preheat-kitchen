@@ -63,12 +63,16 @@ $icon_size: 80px;
     &__icon {
         height: $icon_size; 
         width: $icon_size; 
+        min-width: $icon_size;
+        min-height: $icon_size; 
+        max-height: $icon_size;
+        max-width: $icon_size;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 10px;
+        margin: 10px 10px 10px 20px;
         @media screen and (max-width: 600px){
-            margin-left: 4px;
+            margin-left: 15px;
         }
         margin-left: 8%;
     }
