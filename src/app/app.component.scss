@@ -44,9 +44,12 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        font-weight: 500;
         max-width: 35%; 
+        font-weight: 100; 
         margin: 20px auto auto 100px;
+        background: rgb(0,0,0, .3);
+        border-radius: 20px; 
+        padding: 6px; 
 
         @media screen and (max-width: 600px) {
             max-width: 100%; 
@@ -161,6 +164,7 @@
         line-height: 1.5;
         font-family: Roboto;
         font-weight: 200; 
+        max-width: 1200px; 
         color: white; 
         @media screen and (max-width: 500px) {
             font-size: 18px; 
@@ -188,6 +192,7 @@
         margin: auto;
         text-align: justify;
         width: 90%;
+        max-width: 1200px; 
         font-size: 20px;
         line-height: 1.5;
         font-family: Roboto;
